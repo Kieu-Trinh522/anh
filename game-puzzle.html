@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td{
+        width: 200px;
+        height: auto;
+    }
+    img{
+        width: 700px;
+        height: auto;
+    }
+</style>
+<body>
+
+<img id="img1" src="anh/trinh1.jpg" onclick="imagea(1)">
+            <script>
+                function imagea(number) {
+                    let img= document.getElementById('img'+number)
+                    let index = img.alt
+                    if (index<3){
+                        index++
+                    }else{
+                        index=1
+                    }
+                    img.alt = index;
+                    img.src = "anh/trinh"+index+".jpg";
+                }
+            </script>
+
+
+
+</body>
+</html>
